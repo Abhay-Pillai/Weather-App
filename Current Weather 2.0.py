@@ -11,7 +11,7 @@ from geopy.geocoders import Nominatim
 import time
 from geopy.exc import GeocoderTimedOut, GeocoderInsufficientPrivileges
 time.sleep(1)
-geolocator = Nominatim(user_agent="abhaypillai26@gmail.com")
+geolocator = Nominatim(user_agent="my-email")
 
 
  # Window
@@ -36,7 +36,7 @@ def  getWeather():
             date_label.config(text=str(local_date)) 
 
         #weather
-            api="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=68e90928d3f3bca4a545b02c1f4ad784"
+            api="https://api.openweathermap.org/data/2.5/weather?q="+city+"my-api-key"
 
             json_data = requests.get(api).json()
             condition = json_data['weather'][0]['main']
